@@ -1,15 +1,17 @@
 import React from "react";
-import Header from "./components/header/header";
-import Row from "./components/row/row";
-import Search from "./components/search/search";
-import Table from "./components/table/table";
+import DataArea from "./components/dataArea/DataArea";
+import Header from "./components/header/Header";
+import Search from "./components/search/Search";
+import Table from "./components/table/Table";
 
 function App() {
   return (
-    <div>
-    <Header />
-    <Search />
-    <Table />
+    <div className="App">
+      <Header />
+      <Search />
+      <Table>
+        <DataArea />
+      </Table>
     </div>
   )
 }
