@@ -1,25 +1,25 @@
-import React, { Component } from "react";
-import Table from "../table/Table";
-import API from "../../utils/API";
+import React, { Component } from 'react';
+import Table from '../table/Table';
+import API from '../../utils/API';
 
 export default class DataArea extends Component {
-    state = {
-        employees: [{}]
-    };
+  state = {
+    employees: [{}],
+  };
 
-    componentDidMount() {
-        API.getRandomEmployees()
-            .then(res => this.setState({ employees: res.data }))
-            .catch(err => console.log(err));
-    }
+  componentDidMount() {
+    API.getRandomEmployees().then((results) => {
+      this.setState({
+        employees: results.data.results,
+      });
+    });
+  }
 
-    render() {
-        return (
-            <div>
-                <Table
-                    employees={this.state.employees}
-                />
-            </div >
-        );
-    }
+  render() {
+    return (
+      <div>
+        <Table employees={this.state.employees} />
+      </div>
+    );
+  }
 }
