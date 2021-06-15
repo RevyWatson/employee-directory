@@ -13,7 +13,7 @@ The user should be able to:
   * Filter the users by at least one property.
 
 ## Deployed Application
-[Employee Directory]()
+[Employee Directory](https://revywatson.github.io/employee-directory/)
 
 ## Questions
 
